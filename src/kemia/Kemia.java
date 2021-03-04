@@ -18,6 +18,9 @@ public class Kemia {
         
         //3. feladat 
         
+        System.out.print("3. feladat: ");
+        System.out.println("Elemek száma: " + elemek.size());
+        
     }
     
 }
