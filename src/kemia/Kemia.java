@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Kemia {
 
@@ -17,6 +18,35 @@ public class Kemia {
         }
         
         //3. feladat 
+        
+        //4. feladat
+        
+        //5. feladat
+        Scanner sc = new Scanner(System.in);
+        System.out.print("5.feladat: Kérek egy vegyjelet: ");
+        String vegyjel = sc.nextLine();
+        vegyjel = "ö";
+        while(vegyjel.equals("ö") || vegyjel.equals("ü") || vegyjel.equals("ó") || vegyjel.equals("ő") || vegyjel.equals("ú") || vegyjel.equals("ű") || vegyjel.equals("é") || vegyjel.equals("á")|| vegyjel.equals("í")){           
+            System.out.print("5.feladat: Kérek egy vegyjelet: ");
+            vegyjel = sc.nextLine();
+        }
+        System.out.println(vegyjel);
+        
+        //6.feladat
+        vegyjel = "Co";
+        int i = 0;
+        while(i < elemek.size() && !(vegyjel.equals(elemek.get(i).getVegyjel()))) {
+            i++;
+        }
+        if (i < elemek.size()) {
+            System.out.println("Nincs ilyen elem az adatforrásban");
+        }else {
+            System.out.println(elemek.get(i).getVegyjel());
+            System.out.println(elemek.get(i).getNev());
+            System.out.println(elemek.get(i).getRendszam());
+            System.out.println(elemek.get(i).getEv());
+            System.out.println(elemek.get(i).getFelfedezo());
+        }
         
     }
     
