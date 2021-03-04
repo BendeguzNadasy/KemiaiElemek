@@ -11,9 +11,11 @@ public class Kemia {
     public static void main(String[] args) throws IOException {
         List<String> sorok = Files.readAllLines(Paths.get("felfedezesek.csv"));
         ArrayList<Elem> elemek = new ArrayList<>();
+        
         for (int i = 1; i < sorok.size(); i++) {
             elemek.add(new Elem(sorok.get(i)));
         }
+        
         //3. feladat 
         
     }
