@@ -76,6 +76,19 @@ public class Kemia {
             System.out.println(elemek.get(i).getFelfedezo());
         }
 
+        // feladat 7 
+        int legnagyobbkulombseg = 0;
+        for (int i = 0; i < elemek.size()-1; i++) {
+            Elem regebbi = elemek.get(i);
+            Elem ujabb = elemek.get(i+1);
+            if (regebbi.getEv().charAt(0)!='Ó') {
+                int kulombseg = Integer.parseInt(ujabb.getEv())-Integer.parseInt(regebbi.getEv());
+                if (kulombseg> legnagyobbkulombseg) {
+                    legnagyobbkulombseg = kulombseg;
+                }
+            }
+        
+        }
         System.out.println("7. feladat:"+ legnagyobbkulombseg+" év volt a leghosszab időszak a két elem felfedezése között");
         
         HashMap<Integer,Integer> hanyEgyEvben = new HashMap<>();
