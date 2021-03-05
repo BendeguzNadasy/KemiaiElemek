@@ -34,12 +34,9 @@ public class Kemia {
         
         //5. feladat
         Scanner sc = new Scanner(System.in);
-//        System.out.print("5.feladat: Kérek egy vegyjelet: ");
-//        String vegyjel = sc.nextLine();
         int joKarakter = 0;
         int karakterSzam;
         String vegyjel;
-//        vegyjel = "ö";
         do {                
         System.out.print("5.feladat: Kérek egy vegyjelet: ");
         vegyjel = sc.nextLine();
@@ -60,11 +57,7 @@ public class Kemia {
             }
         } while (joKarakter < karakterSzam);
        
-        
-//        while(vegyjel.equals("ö") || vegyjel.equals("ü") || vegyjel.equals("ó") || vegyjel.equals("ő") || vegyjel.equals("ú") || vegyjel.equals("ű") || vegyjel.equals("é") || vegyjel.equals("á")|| vegyjel.equals("í")){           
-//            System.out.print("5.feladat: Kérek egy vegyjelet: ");
-//            vegyjel = sc.nextLine();
-//        }
+       
         System.out.println(vegyjel);
         
         //6.feladat
