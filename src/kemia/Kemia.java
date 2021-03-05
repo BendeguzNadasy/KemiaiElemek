@@ -4,7 +4,9 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Kemia {
@@ -62,18 +64,18 @@ public class Kemia {
         
         //6.feladat
         vegyjel = "Co";
-        int i = 0;
-        while(i < elemek.size() && !(vegyjel.equals(elemek.get(i).getVegyjel()))) {
-            i++;
+        int j = 0;
+        while(j < elemek.size() && !(vegyjel.equals(elemek.get(j).getVegyjel()))) {
+            j++;
         }
-        if (i >= elemek.size()) {
+        if (j >= elemek.size()) {
             System.out.println("Nincs ilyen elem az adatforrásban");
         }else {
-            System.out.println(elemek.get(i).getVegyjel());
-            System.out.println(elemek.get(i).getNev());
-            System.out.println(elemek.get(i).getRendszam());
-            System.out.println(elemek.get(i).getEv());
-            System.out.println(elemek.get(i).getFelfedezo());
+            System.out.println(elemek.get(j).getVegyjel());
+            System.out.println(elemek.get(j).getNev());
+            System.out.println(elemek.get(j).getRendszam());
+            System.out.println(elemek.get(j).getEv());
+            System.out.println(elemek.get(j).getFelfedezo());
         }
 
         // feladat 7 
