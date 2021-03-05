@@ -19,6 +19,7 @@ public class Kemia {
         
         //3. feladat 
         
+
         //4. feladat
         
         //5. feladat
@@ -47,7 +48,21 @@ public class Kemia {
             System.out.println(elemek.get(i).getEv());
             System.out.println(elemek.get(i).getFelfedezo());
         }
+
+        System.out.print("3. feladat: ");
+        System.out.println("Elemek száma: " + elemek.size());
         
+        //4. feladat
+        
+        System.out.print("4. feladat:");
+        int okorDb = 0;
+        for (Elem elem : elemek) {
+            if (elem.getEv().equals("Ókor")) {
+                okorDb++;
+            }
+        }
+        System.out.println("Felfedezések száma az ókorban: " + okorDb);
+
     }
     
 }
