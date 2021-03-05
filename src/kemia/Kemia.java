@@ -83,7 +83,32 @@ public class Kemia {
             System.out.println(elemek.get(i).getFelfedezo());
         }
 
+        System.out.println("7. feladat:"+ legnagyobbkulombseg+" év volt a leghosszab időszak a két elem felfedezése között");
         
+        HashMap<Integer,Integer> hanyEgyEvben = new HashMap<>();
+        for (int i = 0; i < elemek.size()-1; i++) {
+            Elem elem = elemek.get(i);
+            if (elem.getEv().charAt(0)!='Ó') {
+                int kulcs = Integer.parseInt(elem.getEv());
+                if (hanyEgyEvben.containsKey(kulcs)) {
+                    int jelenlegiDb = hanyEgyEvben.get(kulcs);
+                    hanyEgyEvben.remove(kulcs);
+                    hanyEgyEvben.put(kulcs, ++jelenlegiDb);
+                } else {
+                    hanyEgyEvben.put(kulcs, 1);
+                }
+            }
+        
+        }
+        // feladat 8
+        System.out.println("8. feladat: Statisztika");
+        for (Map.Entry<Integer, Integer> entry : hanyEgyEvben.entrySet()) {
+            Integer key = entry.getKey();
+            Integer value = entry.getValue();
+            if(value>3){
+                System.out.println(""+key+": "+value+" db");
+            }
+        }
 
     }
     
